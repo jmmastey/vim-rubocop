@@ -55,7 +55,7 @@ function! s:RuboCop(current_args)
   let l:rubocop_output  = substitute(l:rubocop_output, '\\"', "'", 'g')
   let l:rubocop_results = split(l:rubocop_output, "\n")
   cexpr l:rubocop_results
-  copen
+  cw
   " Shortcuts taken from Ack.vim - git://github.com/mileszs/ack.vim.git
   exec "nnoremap <silent> <buffer> q :ccl<CR>"
   exec "nnoremap <silent> <buffer> t <C-W><CR><C-W>T"
